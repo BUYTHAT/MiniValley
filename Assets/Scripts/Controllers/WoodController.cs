@@ -19,7 +19,7 @@ public class WoodController : MonoBehaviour
         SpawnItem();
 
         //나무 삭제
-        Destroy(this.gameObject, 1.0f);
+        Destroy(this.gameObject, 0.5f);
         Debug.Log("WoodChopped!");
     }
 
@@ -34,7 +34,7 @@ public class WoodController : MonoBehaviour
 
     async void SpawnItem()
     {
-        await Task.Delay(900);
+        await Task.Delay(450);
         GameObject go = (GameObject)Instantiate(Resources.Load("Prefabs/Item_Wood"));
         GameObject.FindWithTag("DropItem").transform.position = this.transform.position;
         Debug.Log("Item Spawned");
