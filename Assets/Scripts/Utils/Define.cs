@@ -4,13 +4,5 @@ using UnityEngine;
 
 public class Define
 {
-    public enum TreeStatus
-    {
-        Normal,
-        Chopped,
-    }
-    public enum ClickEvent
-    {
-        Click,
-    }
+
 }

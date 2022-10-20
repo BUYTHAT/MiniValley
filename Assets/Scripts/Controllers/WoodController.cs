@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 public class WoodController : MonoBehaviour
 {
-    public GameObject go;
+    [SerializeField] int treeLevel = 1;
+
     void Update()
     {
 
@@ -27,19 +28,36 @@ public class WoodController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Collision w tree");
-            WoodChopped();
+            if (GameObject.FindWithTag("Player").GetComponent<PlayerHealthController>().leftHelath > 0)
+            {
+                Debug.Log("Enough Health");
+
+                if (treeLevel <= GameObject.FindWithTag("Player").GetComponent<PlayerToolController>().axeLevel)
+                {
+                    Debug.Log("Able To Cut Tree");
+
+                    WoodChopped();
+                }
+                else
+                {
+                    Debug.Log("Unable To Cut Tree");
+                }
+            }
+            else
+            {
+                Debug.Log("Not Enough Health");
+            }
+
+
         }
     }
 
     async void SpawnItem()
     {
         await Task.Delay(450);
+        GameObject.FindWithTag("Player").GetComponent<PlayerHealthController>().leftHelath -= 1;
         GameObject go = (GameObject)Instantiate(Resources.Load("Prefabs/Item_Wood"));
         GameObject.FindWithTag("DropItem").transform.position = this.transform.position;
         Debug.Log("Item Spawned");
     }
-
-
-
 }

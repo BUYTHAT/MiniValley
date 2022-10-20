@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2339883094481670733}
   - component: {fileID: 7397330414644828289}
   m_Layer: 0
-  m_Name: Big Tree
+  m_Name: Big Tree Lvl3
   m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,9 +29,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293487567216859945}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.03, y: -0.1, z: 0}
-  m_LocalScale: {x: 1.0287, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.74, y: -5.92, z: 0}
+  m_LocalScale: {x: 1.217775, y: 1.1838, z: 1.1838}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -159,7 +159,7 @@ Tilemap:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -4, y: -12, z: 0}
   m_Size: {x: 4, y: 12, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileAnchor: {x: 3.5, y: 11.72, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
     e00: 1
@@ -261,7 +261,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.0000021, y: -11.337752}
+  m_Offset: {x: -0.01, y: 0.01}
   serializedVersion: 2
   m_Radius: 0.7428193
 --- !u!114 &7397330414644828289
@@ -276,4 +276,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e4c0e74d33d3fc4fbe08760628f582b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 0}
+  treeLevel: 3
